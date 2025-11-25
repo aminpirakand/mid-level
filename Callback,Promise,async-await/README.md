@@ -8,7 +8,8 @@ A callback is a function that is passed as an argument to another function. The 
 
 Example: Callback Function
 
-```function greet(name,callback){
+```
+function greet(name,callback){
     console.log(`hello ${name}`)
     callback()
 }
@@ -17,7 +18,8 @@ function sayGoodBy(){
     console.log(`goodby!`)
 }
 
-greet('amin',sayGoodBy)```
+greet('amin',sayGoodBy)
+```
 
 Explanation:
 
@@ -39,7 +41,7 @@ Resolved (Fulfilled) - The operation completed successfully.
 Rejected - The operation failed.
 
 Example: Promise with then and catch
-
+```
 let promise = new Promise((res, rej) => {
     let success = true;
     if (success) {
@@ -56,6 +58,8 @@ promise
     .catch(error => {
         console.log(error);  // If the promise is rejected
     });
+```
+
 Explanation:
 
 The promise is created with a condition (success variable) to resolve or reject.
@@ -74,7 +78,7 @@ async functions always return a promise.
 await can only be used inside async functions and pauses the function execution until the promise is resolved or rejected.
 
 Example: Fetch Data with async/await
-
+```
 async function fetchData() {
     try {
         let response = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -86,7 +90,7 @@ async function fetchData() {
 }
 
 fetchData();
-
+```
 Explanation:
 
 The fetchData function is marked as async, meaning it returns a promise.
@@ -94,7 +98,7 @@ The fetchData function is marked as async, meaning it returns a promise.
 Inside the function, await is used to pause the function execution until the fetch() API resolves with the data.
 
 # ##Another Example with async/await:
-
+```
 async function fetchData2() {
     try {
         let response = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -106,13 +110,13 @@ async function fetchData2() {
 }
 
 fetchData2();
-
+```
 # ##Executing Multiple Tasks Sequentially
 
 In some cases, we need to execute multiple asynchronous tasks one after another, waiting for one to complete before starting the next.
 
 Example: Sequential Task Execution
-
+```
 function task1() {
     return new Promise(resolve => {
         setTimeout(() => {
@@ -147,6 +151,7 @@ async function executedTasks() {
 }
 
 executedTasks();
+```
 
 Explanation:
 
@@ -159,13 +164,13 @@ Each task is a promise that resolves after a setTimeout.
 Sometimes we need to execute multiple asynchronous tasks at the same time. This can be done using Promise.all() which waits for all promises to resolve or any of them to reject.
 
 Example: Concurrent Task Execution
-
+```
 async function executedTasksConcurrently() {
     await Promise.all([task1(), task2(), task3()]);
 }
 
 executedTasksConcurrently();
-
+```
 Explanation:
 
 Promise.all() is used to execute all tasks at once.
