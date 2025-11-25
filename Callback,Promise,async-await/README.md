@@ -8,7 +8,7 @@ A callback is a function that is passed as an argument to another function. The 
 
 Example: Callback Function
 
-function greet(name,callback){
+```function greet(name,callback){
     console.log(`hello ${name}`)
     callback()
 }
@@ -17,7 +17,7 @@ function sayGoodBy(){
     console.log(`goodby!`)
 }
 
-greet('amin',sayGoodBy)
+greet('amin',sayGoodBy)```
 
 Explanation:
 
