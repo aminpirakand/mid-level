@@ -2,7 +2,7 @@ JavaScript Callbacks, Promises, and Async/Await Example
 
 This repository contains a collection of examples demonstrating the usage of callbacks, promises, and async/await in JavaScript. These concepts are fundamental to handling asynchronous operations in JavaScript.
 
-###Callbacks
+# Callbacks
 
 A callback is a function that is passed as an argument to another function. The passed function (callback) is then executed once the operation completes.
 
@@ -27,8 +27,8 @@ After logging the greeting message, it calls the callback() function.
 
 In this case, sayGoodBy is passed as a callback and executed after greet.
 
-#################################################################################################
-####Promises
+# ################################################################################################
+# ###Promises
 
 A Promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. A promise has three states:
 
@@ -64,8 +64,8 @@ The .then() method is used to handle the successful outcome of the promise.
 
 The .catch() method is used to handle the error if the promise is rejected.
 
-########################################################################################################
-###Async/Await
+# #######################################################################################################
+# ##Async/Await
 
 async and await are syntactic sugar built on top of promises, making asynchronous code look and behave more like synchronous code.
 
@@ -93,7 +93,7 @@ The fetchData function is marked as async, meaning it returns a promise.
 
 Inside the function, await is used to pause the function execution until the fetch() API resolves with the data.
 
-###Another Example with async/await:
+# ##Another Example with async/await:
 
 async function fetchData2() {
     try {
@@ -107,7 +107,7 @@ async function fetchData2() {
 
 fetchData2();
 
-###Executing Multiple Tasks Sequentially
+# ##Executing Multiple Tasks Sequentially
 
 In some cases, we need to execute multiple asynchronous tasks one after another, waiting for one to complete before starting the next.
 
@@ -154,7 +154,7 @@ The executedTasks function is asynchronous and uses await to ensure tasks run se
 
 Each task is a promise that resolves after a setTimeout.
 
-###Executing Multiple Tasks Concurrently
+# ##Executing Multiple Tasks Concurrently
 
 Sometimes we need to execute multiple asynchronous tasks at the same time. This can be done using Promise.all() which waits for all promises to resolve or any of them to reject.
 
@@ -172,7 +172,7 @@ Promise.all() is used to execute all tasks at once.
 
 It waits for all promises to resolve before continuing.
 
-###Summary
+# ##Summary
 
 This repository demonstrates the three key approaches to handling asynchronous operations in JavaScript:
 
@@ -184,7 +184,7 @@ Async/Await - A modern syntax that makes asynchronous code appear synchronous, a
 
 These techniques are essential when working with APIs, databases, or any other form of asynchronous operation in JavaScript.
 
-###How to Run the Examples
+# ##How to Run the Examples
 
 Copy the code into your JavaScript file or an online editor like JSFiddle or CodePen.
 
